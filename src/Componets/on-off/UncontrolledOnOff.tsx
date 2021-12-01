@@ -36,6 +36,7 @@ export function UncontrolledOnnOff(props: PropsType) {
         backgroundColor: on ? 'green' : 'red'
     };
 
+
     return <div>
         <div style={onStyle} onClick={() => {
             setOn(true)

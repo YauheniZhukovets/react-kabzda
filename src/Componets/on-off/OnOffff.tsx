@@ -37,15 +37,16 @@ export function OnnOff(props: PropsType) {
         backgroundColor: props.on ? 'green' : 'red'
     };
 
+    const onClicked = () => {
+        props.setOn(!props.on)
+    }
+    const offClicked = () => {
+        props.setOn(props.on)
+    }
+
     return <div>
-        <div style={onStyle} onClick={() => {
-            props.setOn(!props.on)
-        }}>ON
-        </div>
-        <div style={offStyle} onClick={() => {
-            props.setOn(props.on)
-        }}>OFF
-        </div>
+        <div style={onStyle} onClick={() => onClicked()}>ON</div>
+        <div style={offStyle} onClick={() => offClicked()}>OFF</div>
         <div style={indicatorStyle}></div>
     </div>
 
