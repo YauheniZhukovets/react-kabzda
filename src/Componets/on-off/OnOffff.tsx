@@ -2,10 +2,10 @@ import React from 'react';
 
 type PropsType = {
     on: boolean
-    setOn: (on: boolean) => void
+    onChange: (on: boolean) => void
 }
 
-export function OnnOff(props: PropsType) {
+export function OnOff(props: PropsType) {
     // let on = false;
     // let[on, setOn] = useState(false)
 
@@ -38,10 +38,10 @@ export function OnnOff(props: PropsType) {
     };
 
     const onClicked = () => {
-        props.setOn(!props.on)
+        props.onChange(true)
     }
     const offClicked = () => {
-        props.setOn(props.on)
+        props.onChange(false)
     }
 
     return <div>
