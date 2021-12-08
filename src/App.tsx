@@ -7,7 +7,6 @@ import {UncontrolledRating} from './Componets/Rating/UncontrolledRating';
 import {Rating, RatingValueType} from './Componets/Rating/Rating';
 import {UncontrolledOnnOff} from './Componets/on-off/UncontrolledOnOff';
 import {UncontrolledInput} from './Componets/Input/UncontrolledInput';
-import {ControlledInputCheckbox} from './Componets/Input/ControlledInputCheckbox';
 
 
 // function declaration
@@ -27,8 +26,7 @@ function App() {
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <UncontrolledRating/>
 
-            <UncontrolledInput/>
-            <ControlledInputCheckbox/>
+
 
 
         </div>
