@@ -6,7 +6,10 @@ import {UncontrolledAccardion} from './Componets/Accardion/UncontrolledAccardion
 import {UncontrolledRating} from './Componets/Rating/UncontrolledRating';
 import {Rating, RatingValueType} from './Componets/Rating/Rating';
 import {UncontrolledOnnOff} from './Componets/on-off/UncontrolledOnOff';
-import {UncontrolledInput} from './Componets/Input/UncontrolledInput';
+import {UncontrolledInput} from './Componets/InputCheckboxSelect/UncontrolledInput';
+import {ControlledInputCheckbox} from './Componets/InputCheckboxSelect/ControlledInputCheckbox';
+import {Select} from './Componets/InputCheckboxSelect/Select';
+
 
 
 // function declaration
@@ -25,6 +28,9 @@ function App() {
             <UncontrolledAccardion titleValue={'Menu'}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <UncontrolledRating/>
+            <UncontrolledInput/>
+            <ControlledInputCheckbox/>
+            <Select/>
 
 
 
