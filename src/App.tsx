@@ -6,9 +6,8 @@ import {UncontrolledAccardion} from './Componets/Accardion/UncontrolledAccardion
 import {UncontrolledRating} from './Componets/Rating/UncontrolledRating';
 import {Rating, RatingValueType} from './Componets/Rating/Rating';
 import {UncontrolledOnnOff} from './Componets/on-off/UncontrolledOnOff';
-import {UncontrolledInput} from './Componets/UncontrolledInput/UncontrolledInput';
-
-
+import {UncontrolledInput} from './Componets/Input/UncontrolledInput';
+import {ControlledInputCheckbox} from './Componets/Input/ControlledInputCheckbox';
 
 
 // function declaration
@@ -23,15 +22,13 @@ function App() {
             <UncontrolledOnnOff/>
             <Accordion titleValue={'Menu'}
                        collapsed={accordionCollaps}
-                       onChange={()=>setAccordionCollaps(!accordionCollaps)}/>
+                       onChange={() => setAccordionCollaps(!accordionCollaps)}/>
             <UncontrolledAccardion titleValue={'Menu'}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <UncontrolledRating/>
+
             <UncontrolledInput/>
-
-
-
-
+            <ControlledInputCheckbox/>
 
 
         </div>
