@@ -1,40 +1,31 @@
 import React from 'react';
 
+type ItemType = {
+    title: string
+    value: any
+}
 export type AccordionPropsType = {
     titleValue: string
     collapsed: boolean
     onChange: () => void
+    items: Array<ItemType>
+    onClick: (title:string,value: any)=> void
 }
 
 export function Accordion(props: AccordionPropsType) {
 
     return (
         <div>
-            <AccordionTitle title={props.titleValue} collapsed={props.collapsed} onChange={props.onChange} />
-            {!props.collapsed && <AccordionBody/>}
+            <AccordionTitle title={props.titleValue}
+                            collapsed={props.collapsed}
+                            onChange={props.onChange}
+                            />
+            {!props.collapsed && <AccordionBody items={props.items}
+                                                onClick={props.onClick}/>}
 
         </div>
     )
 }
-
-
-// function Accordion1(props: AccordionPropsType) {
-//     console.log("Accordion rendering")
-//     if (props.collapsed) {
-//         return (
-//             <div>
-//                 <AccordionTitle title={props.titleValue}/>
-//             </div>
-//         )
-//     } else {
-//         return (
-//             <div>
-//                 <AccordionTitle title={props.titleValue}/>
-//                 <AccordionBody/>
-//             </div>
-//         )
-//     }
-// }
 
 type AccordionTitlePropsType = {
     title: string
@@ -49,13 +40,18 @@ function AccordionTitle(props: AccordionTitlePropsType) {
     )
 }
 
-function AccordionBody() {
+
+export type AccordionBodyPropsType = {
+    items: Array<ItemType>
+    onClick: (title:string,value: any)=> void
+}
+function AccordionBody(props:AccordionBodyPropsType) {
     console.log('AccordionBody rendering')
     return (
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+            {props.items.map((m, index) => <li
+                onClick={() => {props.onClick(m.title,m.value)} }
+                key={index}>{m.title}</li>)}
         </ul>
     )
 }
