@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import {Accordion} from './Componets/Accardion/Accordion';
 import {OnOff} from './Componets/on-off/OnOffff';
-import {UncontrolledAccardion} from './Componets/Accardion/UncontrolledAccardion';
+import {UncontrolledAccordion} from './Componets/Accardion/UncontrolledAccardion';
 import {UncontrolledRating} from './Componets/Rating/UncontrolledRating';
 import {Rating, RatingValueType} from './Componets/Rating/Rating';
 import {UncontrolledOnnOff} from './Componets/on-off/UncontrolledOnOff';
@@ -39,7 +39,7 @@ function App() {
                            {title: 'Anya', value: 4}
                        ]}
             />
-            <UncontrolledAccardion titleValue={'Menu'}/>
+            <UncontrolledAccordion titleValue={'-Menu-'}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <UncontrolledRating/>
             <UncontrolledInput/>
