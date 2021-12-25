@@ -13,7 +13,6 @@ const newState = uncontrolledReducer(state, {type: TOGGLE_COLLAPSED})
 })
 
 
-
 test('collapsed should be false',  ()=> {
     //date
 const state: StateType = {
