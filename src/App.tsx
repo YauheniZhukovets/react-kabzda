@@ -10,6 +10,7 @@ import {UncontrolledInput} from './Componets/InputCheckboxSelect/UncontrolledInp
 import {ControlledInputCheckbox} from './Componets/InputCheckboxSelect/ControlledInputCheckbox';
 import {Select} from './Componets/InputCheckboxSelect/Select';
 import {CustomSelect} from './Componets/InputCheckboxSelect/CustomSelect';
+import {ReactMemoExample} from './Componets/ReactMemoExample/ReactMemoExample';
 
 
 // function declaration
@@ -45,7 +46,6 @@ function App() {
             <UncontrolledInput/>
             <ControlledInputCheckbox/>
             <Select/>
-
             <CustomSelect
                 value={valueSelect}
                 callBack={changeValueSelect}
@@ -55,6 +55,7 @@ function App() {
                     {value: '2', title: 'Moscow'},
                     {value: '3', title: 'Kiev'},
                 ]}/>
+            <ReactMemoExample/>
 
         </div>
     )
