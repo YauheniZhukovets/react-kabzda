@@ -11,6 +11,8 @@ import {ControlledInputCheckbox} from './Componets/InputCheckboxSelect/Controlle
 import {Select} from './Componets/InputCheckboxSelect/Select';
 import {CustomSelect} from './Componets/InputCheckboxSelect/CustomSelect';
 import {ReactMemoExample} from './Componets/ReactMemoExample/ReactMemoExample';
+import {DifficultCountingExample} from './Componets/ReactMemoExample/UseMemoExample';
+import {HelpsForReactMemoExample} from './Componets/ReactMemoExample/HelpsForReactMemoExample';
 
 
 // function declaration
@@ -28,7 +30,9 @@ function App() {
         <div className={'App'}>
 
             <OnOff on={switchOn} onChange={setSwitchOn}/>
+            <hr/>
             <UncontrolledOnnOff/>
+            <hr/>
             <Accordion titleValue={'Menu'}
                        collapsed={accordionCollaps}
                        onChange={() => setAccordionCollaps(!accordionCollaps)}
@@ -40,12 +44,25 @@ function App() {
                            {title: 'Anya', value: 4}
                        ]}
             />
+            <hr/>
             <UncontrolledAccordion titleValue={'-Menu-'}/>
+            <hr/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
+            <hr/>
             <UncontrolledRating/>
+            <hr/>
             <UncontrolledInput/>
+            <hr/>
             <ControlledInputCheckbox/>
+            <hr/>
             <Select/>
+            <hr/>
+            <ReactMemoExample/>
+            <hr/>
+            <DifficultCountingExample/>
+            <hr/>
+            <HelpsForReactMemoExample/>
+            <hr/>
             <CustomSelect
                 value={valueSelect}
                 callBack={changeValueSelect}
@@ -55,8 +72,6 @@ function App() {
                     {value: '2', title: 'Moscow'},
                     {value: '3', title: 'Kiev'},
                 ]}/>
-            <ReactMemoExample/>
-
         </div>
     )
 }
