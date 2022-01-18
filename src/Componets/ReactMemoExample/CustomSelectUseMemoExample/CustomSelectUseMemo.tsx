@@ -1,24 +1,28 @@
 import React, {KeyboardEvent, useEffect, useState} from 'react';
-import s from './CustomSelect.module.css'
+import s from '../../InputCheckboxSelect/CustomSelect.module.css'
 
-type ItemType = {
-    title: string
+
+export type ItemType = {
     value: string
+    country: string
+    populationCount: number
+    city: string[]
 
 }
 type SelectPropsType = {
     value: string
-    items: ItemType[]
+    state: ItemType[]
     callBack: (value: string) => void
 }
 
-export const CustomSelect = (props: SelectPropsType) => {
+export const CustomSelectUseMemo = (props: SelectPropsType) => {
+
 
     const [active, setActive] = useState(false)
     const [hoveredValue, SetHoveredValue] = useState(props.value)
 
-    const selectedItem = props.items.find(f => f.value === props.value)
-    const hoveredItem = props.items.find(f => f.value === hoveredValue)
+    const selectedItem = props.state.find(f => f.value === props.value)
+    const hoveredItem = props.state.find(f => f.value === hoveredValue)
 
     useEffect(() => {
         SetHoveredValue(props.value)
@@ -32,11 +36,11 @@ export const CustomSelect = (props: SelectPropsType) => {
 
     const onKeyUp = (e: KeyboardEvent<HTMLDivElement>) => {
         if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-            for (let i = 0; i < props.items.length; i++) {
-                if (props.items[i].value === hoveredValue) {
+            for (let i = 0; i < props.state.length; i++) {
+                if (props.state[i].value === hoveredValue) {
                     const pretendentElement = e.key === 'ArrowDown'
-                        ? props.items[i + 1]
-                        : props.items[i - 1]
+                        ? props.state[i + 1]
+                        : props.state[i - 1]
                     if (pretendentElement) {
                         props.callBack(pretendentElement.value)
                         return
@@ -51,15 +55,16 @@ export const CustomSelect = (props: SelectPropsType) => {
 
     return (
 
+
         <div className={s.select} onKeyUp={onKeyUp} tabIndex={0}>
             <span className={s.main}
                   onClick={toggleItems}
 
-            >{selectedItem && selectedItem.title}</span>
+            >{selectedItem && selectedItem.country}</span>
 
             {active &&
                 <div className={s.items}>
-                    {props.items.map(m => <div
+                    {props.state.map(m => <div
                             onMouseEnter={() => {
                                 SetHoveredValue(m.value)
                             }}
@@ -67,7 +72,7 @@ export const CustomSelect = (props: SelectPropsType) => {
                             key={m.value}
                             onClick={() => onItemClick(m.value)}
                         >
-                            {m.title}
+                        {m.country}
                         </div>
                     )}
                 </div>

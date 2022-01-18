@@ -13,6 +13,14 @@ import {CustomSelect} from './Componets/InputCheckboxSelect/CustomSelect';
 import {ReactMemoExample} from './Componets/ReactMemoExample/ReactMemoExample';
 import {DifficultCountingExample} from './Componets/ReactMemoExample/UseMemoExample';
 import {HelpsForReactMemoExample} from './Componets/ReactMemoExample/HelpsForReactMemoExample';
+import {
+    ThreeSelectUseMemoExample
+} from './Componets/ReactMemoExample/CustomSelectUseMemoExample/ThreeSelectUseMemoExample';
+import {LikeUseCallback} from './Componets/LikeUseCallback';
+import {UseStateExample} from './Componets/useState';
+import {UseEffect} from './Componets/useEffect/UseEffect';
+import {UseEffectSetTimeout} from './Componets/useEffect/UseEffectSetTimeout';
+import {Clock} from './Componets/useEffect/Clock';
 
 
 // function declaration
@@ -72,6 +80,22 @@ function App() {
                     {value: '2', title: 'Moscow'},
                     {value: '3', title: 'Kiev'},
                 ]}/>
+            <hr/>
+            <ThreeSelectUseMemoExample/>
+            <br/>
+            <LikeUseCallback/>
+            <br/>
+            <UseStateExample/>
+            <br/>
+            <UseEffect/>
+            <br/>
+            <UseEffectSetTimeout/>
+            <br/>
+            <Clock/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
         </div>
     )
 }
