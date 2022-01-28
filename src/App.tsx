@@ -21,6 +21,7 @@ import {UseStateExample} from './Componets/useState';
 import {UseEffect} from './Componets/useEffect/UseEffect';
 import {UseEffectSetTimeout} from './Componets/useEffect/UseEffectSetTimeout';
 import {Clock} from './Componets/useEffect/Clock';
+import {ExampleClock} from './Componets/useEffect/ExampleClock';
 
 
 // function declaration
@@ -92,6 +93,7 @@ function App() {
             <UseEffectSetTimeout/>
             <br/>
             <Clock/>
+            <ExampleClock/>
             <br/>
             <br/>
             <br/>
@@ -99,6 +101,5 @@ function App() {
         </div>
     )
 }
-
 
 export default App;

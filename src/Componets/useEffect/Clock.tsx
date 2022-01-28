@@ -1,8 +1,5 @@
 import React, {useEffect, useState} from 'react';
 
-
-
-
 export const Clock = () => {
     const date = new Date()
 
