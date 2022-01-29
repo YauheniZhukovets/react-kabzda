@@ -20,8 +20,8 @@ import {LikeUseCallback} from './Componets/LikeUseCallback';
 import {UseStateExample} from './Componets/useState';
 import {UseEffect} from './Componets/useEffect/UseEffect';
 import {UseEffectSetTimeout} from './Componets/useEffect/UseEffectSetTimeout';
-import {Clock} from './Componets/useEffect/Clock';
-import {ExampleClock} from './Componets/useEffect/ExampleClock';
+import {ExampleClock} from './Componets/Clock/ExampleClock';
+import {Clock} from './Componets/Clock/Clock';
 
 
 // function declaration
@@ -92,7 +92,6 @@ function App() {
             <br/>
             <UseEffectSetTimeout/>
             <br/>
-            <Clock/>
             <ExampleClock/>
             <br/>
             <br/>
