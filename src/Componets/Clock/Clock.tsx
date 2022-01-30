@@ -14,10 +14,10 @@ export const Clock = (props: ClockPropsType) => {
     const [date, setDate] = useState(new Date())
 
     useEffect(() => {
-        const timeID = setInterval(() => {
+        const intervalID = setInterval(() => {
             setDate(new Date())
         }, 1000)
-        return () => clearInterval(timeID)
+        return () => clearInterval(intervalID)
     }, [])
 
 

@@ -3,7 +3,7 @@ import {Clock} from './Clock';
 import {ComponentMeta} from '@storybook/react';
 
 export default {
-    title: 'Example/Clock',
+    title: 'Kabzda/Clock',
     component: Clock,
 } as ComponentMeta<typeof Clock>;
 
